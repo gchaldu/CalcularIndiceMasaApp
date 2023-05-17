@@ -26,22 +26,22 @@
                 <div class="centrar">
                     <label for="altura">Altura</label>
                     <div class="altura">
-                        <div class="estilo-numero">170</div>
+                        <div class="estilo-numero">{{altura}}</div>
                         <div> <span class="cm">cm</span></div>
                     </div>
-                    <input type="range">              
+                    <input type="range" [value]="altura" (input)="alturaPersona($event)" min="120" max="230">              
                 </div>
             </div>
             <div class="box">
                 <div class="centrar">
                     <label for="peso">Peso</label>
                     <div class="altura">
-                        <div class="estilo-numero">60</div>
+                        <div class="estilo-numero">{{peso}}</div>
                         <div> <span class="cm">Kg</span></div>
                     </div>
                     <div>
-                        <button class="btn"><i class="fa-solid fa-plus"></i></button>
-                        <button class="btn"><i class="fa-solid fa-minus"></i></button>
+                        <button class="btn" (click)="sumarPeso()"><i class="fa-solid fa-plus"></i></button>
+                        <button class="btn" (click)="restarPeso()" ><i class="fa-solid fa-minus"></i></button>
                     </div>  
                 </div>
             </div>
@@ -49,16 +49,16 @@
                 <div class="centrar">
                     <label for="edad">Edad</label>
                     <div class="altura">
-                        <div class="estilo-numero">45</div>
+                        <div class="estilo-numero">{{edad}}</div>
                         <div> <span class="cm">años</span></div>
                     </div>
                     <div>
-                        <button class="btn"><i class="fa-solid fa-plus"></i></button>
-                        <button class="btn"><i class="fa-solid fa-minus"></i></button>
+                        <button class="btn" (click)="sumarEdad()"><i class="fa-solid fa-plus"></i></button>
+                        <button class="btn" (click)="restarEdad()" ><i class="fa-solid fa-minus"></i></button>
                     </div>  
                 </div>
             </div>
-            <button class="button">Calcular</button>
+            <button class="button" (click)="calcularIndiceMasaCorporal()" >Calcular</button>
     </main> 
 </body>
 </html>
