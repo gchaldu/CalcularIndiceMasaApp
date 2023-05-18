@@ -9,14 +9,13 @@
 <body>
     <main class="principal">
             <h1 class="titulo">BMI Calculadora</h1>        
-            <div class="box">
+            <div class="box" (click)="cargarSexoM()" id="masculino">
                 <div class="centrar">
                     <i class="fa-solid fa-mars sexo"></i> 
-                    <label for="masculino">Masculino</label>                 
-                </div>
-                
+                    <label for="masculino">Masculino</label>  
+                </div>                                      
             </div>
-            <div class="box">
+            <div class="box" (click)="cargarSexoF()" id="femenino">
                 <div class="centrar">
                     <i class="fa-solid fa-venus sexo"></i>
                     <label for="femenino">Femenino</label>
