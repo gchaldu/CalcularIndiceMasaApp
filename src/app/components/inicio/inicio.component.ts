@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit{
   public altura: number = 170;
   public peso: number = 70;
   public edad: number = 40;
@@ -24,6 +24,9 @@ export class InicioComponent {
   constructor(private router: Router)
   {
 
+  }
+  ngOnInit(): void {
+    this.cargarSexoF();
   }
 
   public restarEdad():number
